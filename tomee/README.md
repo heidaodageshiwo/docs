@@ -30,6 +30,8 @@ WARNING:
 -	[`8-jre-7.1.0-plus` (*8-jre-7.1.0-plus/Dockerfile*)](https://github.com/tomitribe/docker-tomee/blob/e89cbd9ac6d8b62d64f40d345a488b85c960d9cc/8-jre-7.1.0-plus/Dockerfile)
 -	[`8-jre-7.1.0-webprofile`, `latest` (*8-jre-7.1.0-webprofile/Dockerfile*)](https://github.com/tomitribe/docker-tomee/blob/e89cbd9ac6d8b62d64f40d345a488b85c960d9cc/8-jre-7.1.0-webprofile/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/s390x/job/tomee/badge/icon) (`s390x/tomee` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/s390x/job/tomee/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -97,19 +99,19 @@ ManageCat is a cloud management and service platform for Apache Tomcat and Apach
 Run the default TomEE server (`CMD ["catalina.sh", "run"]`):
 
 ```console
-$ docker run -it --rm tomee:<java-version>\-<tomeeversion>\-<flavour>
+$ docker run -it --rm s390x/tomee:<java-version>\-<tomeeversion>\-<flavour>
 ```
 
 For example running Apache TomEE 1.7.2 with JRE 8 and Webprofile flavour will be:
 
 ```console
-$ docker run -it --rm tomee:8-jre-1.7.2-webprofile
+$ docker run -it --rm s390x/tomee:8-jre-1.7.2-webprofile
 ```
 
 You can test it by visiting `http://container-ip:8080` in a browser or, if you need access outside the host, on port 8888:
 
 ```console
-$ docker run -it --rm -p 8888:8080 tomee:<java-version>\-<tomeeversion>\-<flavour>
+$ docker run -it --rm -p 8888:8080 s390x/tomee:<java-version>\-<tomeeversion>\-<flavour>
 ```
 
 You can then go to `http://localhost:8888` or `http://host-ip:8888` in a browser.

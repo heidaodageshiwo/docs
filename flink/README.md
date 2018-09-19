@@ -37,6 +37,8 @@ WARNING:
 -	[`1.6.0-hadoop28-scala_2.11-alpine`, `1.6.0-hadoop28-alpine`, `1.6-hadoop28-alpine`, `hadoop28-alpine` (*1.6/hadoop28-scala_2.11-alpine/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/be6d529f5681437b308398db6f5f50f02c5d5ca3/1.6/hadoop28-scala_2.11-alpine/Dockerfile)
 -	[`1.6.0-scala_2.11-alpine`, `1.6-scala_2.11-alpine`, `scala_2.11-alpine`, `1.6.0-alpine`, `1.6-alpine`, `alpine` (*1.6/scala_2.11-alpine/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/be6d529f5681437b308398db6f5f50f02c5d5ca3/1.6/scala_2.11-alpine/Dockerfile)
 
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/s390x/job/flink/badge/icon) (`s390x/flink` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/s390x/job/flink/)
+
 # Quick reference
 
 -	**Where to get help**:  
@@ -86,7 +88,7 @@ Starting with Flink 1.5, images without "hadoop" in the tag are the "Hadoop-free
 To run a single Flink local cluster:
 
 ```console
-$ docker run --name flink_local -p 8081:8081 -t flink local
+$ docker run --name flink_local -p 8081:8081 -t s390x/flink local
 ```
 
 Then with a web browser go to `http://localhost:8081/` to see the Flink Web Dashboard (adjust the hostname for your Docker host).
@@ -94,7 +96,7 @@ Then with a web browser go to `http://localhost:8081/` to see the Flink Web Dash
 To use Flink, you can submit a job to the cluster using the Web UI or you can also do it from a different Flink container, for example:
 
 ```console
-$ docker run --rm -t flink flink run -m <jobmanager:port> -c <your_class> <your_jar> <your_params>
+$ docker run --rm -t s390x/flink flink run -m <jobmanager:port> -c <your_class> <your_jar> <your_params>
 ```
 
 ## Running a JobManager or a TaskManager
@@ -102,13 +104,13 @@ $ docker run --rm -t flink flink run -m <jobmanager:port> -c <your_class> <your_
 You can run a JobManager (master).
 
 ```console
-$ docker run --name flink_jobmanager -d -t flink jobmanager
+$ docker run --name flink_jobmanager -d -t s390x/flink jobmanager
 ```
 
 You can also run a TaskManager (worker). Notice that workers need to register with the JobManager directly or via ZooKeeper so the master starts to send them tasks to execute.
 
 ```console
-$ docker run --name flink_taskmanager -d -t flink taskmanager
+$ docker run --name flink_taskmanager -d -t s390x/flink taskmanager
 ```
 
 ## Running a cluster using Docker Compose
@@ -167,13 +169,13 @@ This repository is maintained by members of the Apache Flink community.
 
 # Image Variants
 
-The `flink` images come in many flavors, each designed for a specific use case.
+The `s390x/flink` images come in many flavors, each designed for a specific use case.
 
-## `flink:<version>`
+## `s390x/flink:<version>`
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
 
-## `flink:<version>-alpine`
+## `s390x/flink:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
