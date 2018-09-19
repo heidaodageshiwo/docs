@@ -16,26 +16,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.5.3-hadoop24-scala_2.11`, `1.5.3-hadoop24`, `1.5-hadoop24` (*1.5/hadoop24-scala_2.11-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/3aefbc6e3578db4cbf0b766685530138b0489350/1.5/hadoop24-scala_2.11-debian/Dockerfile)
--	[`1.5.3-hadoop26-scala_2.11`, `1.5.3-hadoop26`, `1.5-hadoop26` (*1.5/hadoop26-scala_2.11-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/3aefbc6e3578db4cbf0b766685530138b0489350/1.5/hadoop26-scala_2.11-debian/Dockerfile)
--	[`1.5.3-hadoop27-scala_2.11`, `1.5.3-hadoop27`, `1.5-hadoop27` (*1.5/hadoop27-scala_2.11-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/3aefbc6e3578db4cbf0b766685530138b0489350/1.5/hadoop27-scala_2.11-debian/Dockerfile)
--	[`1.5.3-hadoop28-scala_2.11`, `1.5.3-hadoop28`, `1.5-hadoop28` (*1.5/hadoop28-scala_2.11-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/3aefbc6e3578db4cbf0b766685530138b0489350/1.5/hadoop28-scala_2.11-debian/Dockerfile)
--	[`1.5.3-scala_2.11`, `1.5-scala_2.11`, `1.5.3`, `1.5` (*1.5/scala_2.11-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/3aefbc6e3578db4cbf0b766685530138b0489350/1.5/scala_2.11-debian/Dockerfile)
--	[`1.5.3-hadoop24-scala_2.11-alpine`, `1.5.3-hadoop24-alpine`, `1.5-hadoop24-alpine` (*1.5/hadoop24-scala_2.11-alpine/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/3aefbc6e3578db4cbf0b766685530138b0489350/1.5/hadoop24-scala_2.11-alpine/Dockerfile)
--	[`1.5.3-hadoop26-scala_2.11-alpine`, `1.5.3-hadoop26-alpine`, `1.5-hadoop26-alpine` (*1.5/hadoop26-scala_2.11-alpine/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/3aefbc6e3578db4cbf0b766685530138b0489350/1.5/hadoop26-scala_2.11-alpine/Dockerfile)
--	[`1.5.3-hadoop27-scala_2.11-alpine`, `1.5.3-hadoop27-alpine`, `1.5-hadoop27-alpine` (*1.5/hadoop27-scala_2.11-alpine/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/3aefbc6e3578db4cbf0b766685530138b0489350/1.5/hadoop27-scala_2.11-alpine/Dockerfile)
--	[`1.5.3-hadoop28-scala_2.11-alpine`, `1.5.3-hadoop28-alpine`, `1.5-hadoop28-alpine` (*1.5/hadoop28-scala_2.11-alpine/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/3aefbc6e3578db4cbf0b766685530138b0489350/1.5/hadoop28-scala_2.11-alpine/Dockerfile)
--	[`1.5.3-scala_2.11-alpine`, `1.5-scala_2.11-alpine`, `1.5.3-alpine`, `1.5-alpine` (*1.5/scala_2.11-alpine/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/3aefbc6e3578db4cbf0b766685530138b0489350/1.5/scala_2.11-alpine/Dockerfile)
--	[`1.6.0-hadoop24-scala_2.11`, `1.6.0-hadoop24`, `1.6-hadoop24`, `hadoop24` (*1.6/hadoop24-scala_2.11-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/be6d529f5681437b308398db6f5f50f02c5d5ca3/1.6/hadoop24-scala_2.11-debian/Dockerfile)
--	[`1.6.0-hadoop26-scala_2.11`, `1.6.0-hadoop26`, `1.6-hadoop26`, `hadoop26` (*1.6/hadoop26-scala_2.11-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/be6d529f5681437b308398db6f5f50f02c5d5ca3/1.6/hadoop26-scala_2.11-debian/Dockerfile)
--	[`1.6.0-hadoop27-scala_2.11`, `1.6.0-hadoop27`, `1.6-hadoop27`, `hadoop27` (*1.6/hadoop27-scala_2.11-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/be6d529f5681437b308398db6f5f50f02c5d5ca3/1.6/hadoop27-scala_2.11-debian/Dockerfile)
--	[`1.6.0-hadoop28-scala_2.11`, `1.6.0-hadoop28`, `1.6-hadoop28`, `hadoop28` (*1.6/hadoop28-scala_2.11-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/be6d529f5681437b308398db6f5f50f02c5d5ca3/1.6/hadoop28-scala_2.11-debian/Dockerfile)
--	[`1.6.0-scala_2.11`, `1.6-scala_2.11`, `scala_2.11`, `1.6.0`, `1.6`, `latest` (*1.6/scala_2.11-debian/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/be6d529f5681437b308398db6f5f50f02c5d5ca3/1.6/scala_2.11-debian/Dockerfile)
--	[`1.6.0-hadoop24-scala_2.11-alpine`, `1.6.0-hadoop24-alpine`, `1.6-hadoop24-alpine`, `hadoop24-alpine` (*1.6/hadoop24-scala_2.11-alpine/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/be6d529f5681437b308398db6f5f50f02c5d5ca3/1.6/hadoop24-scala_2.11-alpine/Dockerfile)
--	[`1.6.0-hadoop26-scala_2.11-alpine`, `1.6.0-hadoop26-alpine`, `1.6-hadoop26-alpine`, `hadoop26-alpine` (*1.6/hadoop26-scala_2.11-alpine/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/be6d529f5681437b308398db6f5f50f02c5d5ca3/1.6/hadoop26-scala_2.11-alpine/Dockerfile)
--	[`1.6.0-hadoop27-scala_2.11-alpine`, `1.6.0-hadoop27-alpine`, `1.6-hadoop27-alpine`, `hadoop27-alpine` (*1.6/hadoop27-scala_2.11-alpine/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/be6d529f5681437b308398db6f5f50f02c5d5ca3/1.6/hadoop27-scala_2.11-alpine/Dockerfile)
--	[`1.6.0-hadoop28-scala_2.11-alpine`, `1.6.0-hadoop28-alpine`, `1.6-hadoop28-alpine`, `hadoop28-alpine` (*1.6/hadoop28-scala_2.11-alpine/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/be6d529f5681437b308398db6f5f50f02c5d5ca3/1.6/hadoop28-scala_2.11-alpine/Dockerfile)
--	[`1.6.0-scala_2.11-alpine`, `1.6-scala_2.11-alpine`, `scala_2.11-alpine`, `1.6.0-alpine`, `1.6-alpine`, `alpine` (*1.6/scala_2.11-alpine/Dockerfile*)](https://github.com/docker-flink/docker-flink/blob/be6d529f5681437b308398db6f5f50f02c5d5ca3/1.6/scala_2.11-alpine/Dockerfile)
+**No supported tags found!**
+
+It is very likely that `flink` does not support the currently selected architecture (`windows-amd64`).
 
 # Quick reference
 
@@ -86,7 +69,7 @@ Starting with Flink 1.5, images without "hadoop" in the tag are the "Hadoop-free
 To run a single Flink local cluster:
 
 ```console
-$ docker run --name flink_local -p 8081:8081 -t flink local
+$ docker run --name flink_local -p 8081:8081 -t winamd64/flink local
 ```
 
 Then with a web browser go to `http://localhost:8081/` to see the Flink Web Dashboard (adjust the hostname for your Docker host).
@@ -94,7 +77,7 @@ Then with a web browser go to `http://localhost:8081/` to see the Flink Web Dash
 To use Flink, you can submit a job to the cluster using the Web UI or you can also do it from a different Flink container, for example:
 
 ```console
-$ docker run --rm -t flink flink run -m <jobmanager:port> -c <your_class> <your_jar> <your_params>
+$ docker run --rm -t winamd64/flink flink run -m <jobmanager:port> -c <your_class> <your_jar> <your_params>
 ```
 
 ## Running a JobManager or a TaskManager
@@ -102,13 +85,13 @@ $ docker run --rm -t flink flink run -m <jobmanager:port> -c <your_class> <your_
 You can run a JobManager (master).
 
 ```console
-$ docker run --name flink_jobmanager -d -t flink jobmanager
+$ docker run --name flink_jobmanager -d -t winamd64/flink jobmanager
 ```
 
 You can also run a TaskManager (worker). Notice that workers need to register with the JobManager directly or via ZooKeeper so the master starts to send them tasks to execute.
 
 ```console
-$ docker run --name flink_taskmanager -d -t flink taskmanager
+$ docker run --name flink_taskmanager -d -t winamd64/flink taskmanager
 ```
 
 ## Running a cluster using Docker Compose
@@ -164,22 +147,6 @@ These are the default ports used by the Flink image:
 This repository is available on [github.com/docker-flink/docker-flink](https://github.com/docker-flink/docker-flink), and the official build is on the [Docker Hub](https://hub.docker.com/_/flink/).
 
 This repository is maintained by members of the Apache Flink community.
-
-# Image Variants
-
-The `flink` images come in many flavors, each designed for a specific use case.
-
-## `flink:<version>`
-
-This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
-
-## `flink:<version>-alpine`
-
-This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
-
-This variant is highly recommended when final image size being as small as possible is desired. The main caveat to note is that it does use [musl libc](http://www.musl-libc.org) instead of [glibc and friends](http://www.etalabs.net/compare_libcs.html), so certain software might run into issues depending on the depth of their libc requirements. However, most software doesn't have an issue with this, so this variant is usually a very safe choice. See [this Hacker News comment thread](https://news.ycombinator.com/item?id=10782897) for more discussion of the issues that might arise and some pro/con comparisons of using Alpine-based images.
-
-To minimize image size, it's uncommon for additional related tools (such as `git` or `bash`) to be included in Alpine-based images. Using this image as a base, add the things you need in your own Dockerfile (see the [`alpine` image description](https://hub.docker.com/_/alpine/) for examples of how to install packages if you are unfamiliar).
 
 # License
 

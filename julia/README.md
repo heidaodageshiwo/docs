@@ -18,26 +18,23 @@ WARNING:
 
 ## Simple Tags
 
--	[`1.0.0-stretch`, `1.0-stretch`, `1-stretch`, `stretch` (*1.0/stretch/Dockerfile*)](https://github.com/docker-library/julia/blob/9e8bb3426385de28cfac6576baef9bf580fe0e33/1.0/stretch/Dockerfile)
 -	[`1.0.0-windowsservercore-ltsc2016`, `1.0-windowsservercore-ltsc2016`, `1-windowsservercore-ltsc2016`, `windowsservercore-ltsc2016` (*1.0/windows/windowsservercore-ltsc2016/Dockerfile*)](https://github.com/docker-library/julia/blob/5407cd3df30c7c0a5f416f5d61341cf960f8139f/1.0/windows/windowsservercore-ltsc2016/Dockerfile)
 -	[`1.0.0-windowsservercore-1709`, `1.0-windowsservercore-1709`, `1-windowsservercore-1709`, `windowsservercore-1709` (*1.0/windows/windowsservercore-1709/Dockerfile*)](https://github.com/docker-library/julia/blob/5407cd3df30c7c0a5f416f5d61341cf960f8139f/1.0/windows/windowsservercore-1709/Dockerfile)
 -	[`1.0.0-windowsservercore-1803`, `1.0-windowsservercore-1803`, `1-windowsservercore-1803`, `windowsservercore-1803` (*1.0/windows/windowsservercore-1803/Dockerfile*)](https://github.com/docker-library/julia/blob/5407cd3df30c7c0a5f416f5d61341cf960f8139f/1.0/windows/windowsservercore-1803/Dockerfile)
--	[`0.7.0-stretch`, `0.7-stretch`, `0-stretch` (*0/stretch/Dockerfile*)](https://github.com/docker-library/julia/blob/9e8bb3426385de28cfac6576baef9bf580fe0e33/0/stretch/Dockerfile)
--	[`0.7.0-jessie`, `0.7-jessie`, `0-jessie` (*0/jessie/Dockerfile*)](https://github.com/docker-library/julia/blob/9e8bb3426385de28cfac6576baef9bf580fe0e33/0/jessie/Dockerfile)
 -	[`0.7.0-windowsservercore-ltsc2016`, `0.7-windowsservercore-ltsc2016`, `0-windowsservercore-ltsc2016` (*0/windows/windowsservercore-ltsc2016/Dockerfile*)](https://github.com/docker-library/julia/blob/9e8bb3426385de28cfac6576baef9bf580fe0e33/0/windows/windowsservercore-ltsc2016/Dockerfile)
 -	[`0.7.0-windowsservercore-1709`, `0.7-windowsservercore-1709`, `0-windowsservercore-1709` (*0/windows/windowsservercore-1709/Dockerfile*)](https://github.com/docker-library/julia/blob/9e8bb3426385de28cfac6576baef9bf580fe0e33/0/windows/windowsservercore-1709/Dockerfile)
 
 ## Shared Tags
 
 -	`1.0.0`, `1.0`, `1`, `latest`:
-	-	[`1.0.0-stretch` (*1.0/stretch/Dockerfile*)](https://github.com/docker-library/julia/blob/9e8bb3426385de28cfac6576baef9bf580fe0e33/1.0/stretch/Dockerfile)
 	-	[`1.0.0-windowsservercore-ltsc2016` (*1.0/windows/windowsservercore-ltsc2016/Dockerfile*)](https://github.com/docker-library/julia/blob/5407cd3df30c7c0a5f416f5d61341cf960f8139f/1.0/windows/windowsservercore-ltsc2016/Dockerfile)
 	-	[`1.0.0-windowsservercore-1709` (*1.0/windows/windowsservercore-1709/Dockerfile*)](https://github.com/docker-library/julia/blob/5407cd3df30c7c0a5f416f5d61341cf960f8139f/1.0/windows/windowsservercore-1709/Dockerfile)
 	-	[`1.0.0-windowsservercore-1803` (*1.0/windows/windowsservercore-1803/Dockerfile*)](https://github.com/docker-library/julia/blob/5407cd3df30c7c0a5f416f5d61341cf960f8139f/1.0/windows/windowsservercore-1803/Dockerfile)
 -	`0.7.0`, `0.7`, `0`:
-	-	[`0.7.0-stretch` (*0/stretch/Dockerfile*)](https://github.com/docker-library/julia/blob/9e8bb3426385de28cfac6576baef9bf580fe0e33/0/stretch/Dockerfile)
 	-	[`0.7.0-windowsservercore-ltsc2016` (*0/windows/windowsservercore-ltsc2016/Dockerfile*)](https://github.com/docker-library/julia/blob/9e8bb3426385de28cfac6576baef9bf580fe0e33/0/windows/windowsservercore-ltsc2016/Dockerfile)
 	-	[`0.7.0-windowsservercore-1709` (*0/windows/windowsservercore-1709/Dockerfile*)](https://github.com/docker-library/julia/blob/9e8bb3426385de28cfac6576baef9bf580fe0e33/0/windows/windowsservercore-1709/Dockerfile)
+
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/windows-amd64/job/julia/badge/icon) (`winamd64/julia` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/windows-amd64/job/julia/)
 
 # Quick reference
 
@@ -82,13 +79,13 @@ Julia is a high-level, high-performance dynamic programming language for technic
 Starting the Julia REPL is as easy as the following:
 
 ```console
-$ docker run -it --rm julia
+$ docker run -it --rm winamd64/julia
 ```
 
 ## Run Julia script from your local directory inside container
 
 ```console
-$ docker run -it --rm -v "$PWD":/usr/myapp -w /usr/myapp julia julia script.jl arg1 arg2
+$ docker run -it --rm -v "$PWD":/usr/myapp -w /usr/myapp winamd64/julia julia script.jl arg1 arg2
 ```
 
 # License
