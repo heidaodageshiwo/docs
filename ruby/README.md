@@ -25,16 +25,14 @@ WARNING:
 -	[`2.5.1-alpine3.7`, `2.5-alpine3.7`, `2-alpine3.7`, `alpine3.7`, `2.5.1-alpine`, `2.5-alpine`, `2-alpine`, `alpine` (*2.5/alpine3.7/Dockerfile*)](https://github.com/docker-library/ruby/blob/96967d8295f1b26a784e5893f41b5f5ccd8318eb/2.5/alpine3.7/Dockerfile)
 -	[`2.4.4-stretch`, `2.4-stretch`, `2.4.4`, `2.4` (*2.4/stretch/Dockerfile*)](https://github.com/docker-library/ruby/blob/a7ccc7ba6924a2abb902da99dae82aadde9b0581/2.4/stretch/Dockerfile)
 -	[`2.4.4-slim-stretch`, `2.4-slim-stretch`, `2.4.4-slim`, `2.4-slim` (*2.4/stretch/slim/Dockerfile*)](https://github.com/docker-library/ruby/blob/a7ccc7ba6924a2abb902da99dae82aadde9b0581/2.4/stretch/slim/Dockerfile)
--	[`2.4.4-jessie`, `2.4-jessie` (*2.4/jessie/Dockerfile*)](https://github.com/docker-library/ruby/blob/a7ccc7ba6924a2abb902da99dae82aadde9b0581/2.4/jessie/Dockerfile)
--	[`2.4.4-slim-jessie`, `2.4-slim-jessie` (*2.4/jessie/slim/Dockerfile*)](https://github.com/docker-library/ruby/blob/a7ccc7ba6924a2abb902da99dae82aadde9b0581/2.4/jessie/slim/Dockerfile)
 -	[`2.4.4-alpine3.7`, `2.4-alpine3.7`, `2.4.4-alpine`, `2.4-alpine` (*2.4/alpine3.7/Dockerfile*)](https://github.com/docker-library/ruby/blob/96967d8295f1b26a784e5893f41b5f5ccd8318eb/2.4/alpine3.7/Dockerfile)
 -	[`2.4.4-alpine3.6`, `2.4-alpine3.6` (*2.4/alpine3.6/Dockerfile*)](https://github.com/docker-library/ruby/blob/96967d8295f1b26a784e5893f41b5f5ccd8318eb/2.4/alpine3.6/Dockerfile)
 -	[`2.3.7-stretch`, `2.3-stretch`, `2.3.7`, `2.3` (*2.3/stretch/Dockerfile*)](https://github.com/docker-library/ruby/blob/4fa4c114e81bf8bdb653262c033da1d3fafa9141/2.3/stretch/Dockerfile)
 -	[`2.3.7-slim-stretch`, `2.3-slim-stretch`, `2.3.7-slim`, `2.3-slim` (*2.3/stretch/slim/Dockerfile*)](https://github.com/docker-library/ruby/blob/4fa4c114e81bf8bdb653262c033da1d3fafa9141/2.3/stretch/slim/Dockerfile)
--	[`2.3.7-jessie`, `2.3-jessie` (*2.3/jessie/Dockerfile*)](https://github.com/docker-library/ruby/blob/4fa4c114e81bf8bdb653262c033da1d3fafa9141/2.3/jessie/Dockerfile)
--	[`2.3.7-slim-jessie`, `2.3-slim-jessie` (*2.3/jessie/slim/Dockerfile*)](https://github.com/docker-library/ruby/blob/4fa4c114e81bf8bdb653262c033da1d3fafa9141/2.3/jessie/slim/Dockerfile)
 -	[`2.3.7-alpine3.8`, `2.3-alpine3.8`, `2.3.7-alpine`, `2.3-alpine` (*2.3/alpine3.8/Dockerfile*)](https://github.com/docker-library/ruby/blob/e7d27d514f15f3bffdc7fac383a8b83494317d47/2.3/alpine3.8/Dockerfile)
 -	[`2.3.7-alpine3.7`, `2.3-alpine3.7` (*2.3/alpine3.7/Dockerfile*)](https://github.com/docker-library/ruby/blob/96967d8295f1b26a784e5893f41b5f5ccd8318eb/2.3/alpine3.7/Dockerfile)
+
+[![Build Status](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/ruby/badge/icon) (`arm64v8/ruby` build job)](https://doi-janky.infosiftr.net/job/multiarch/job/arm64v8/job/ruby/)
 
 # Quick reference
 
@@ -77,7 +75,7 @@ Ruby is a dynamic, reflective, object-oriented, general-purpose, open-source pro
 ## Create a `Dockerfile` in your Ruby app project
 
 ```dockerfile
-FROM ruby:2.5
+FROM arm64v8/ruby:2.5
 
 # throw errors if Gemfile has been modified since Gemfile.lock
 RUN bundle config --global frozen 1
@@ -106,7 +104,7 @@ $ docker run -it --name my-running-script my-ruby-app
 The above example `Dockerfile` expects a `Gemfile.lock` in your app directory. This `docker run` will help you generate one. Run it in the root of your app, next to the `Gemfile`:
 
 ```console
-$ docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app ruby:2.5 bundle install
+$ docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app arm64v8/ruby:2.5 bundle install
 ```
 
 ## Run a single Ruby script
@@ -114,7 +112,7 @@ $ docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app ruby:2.5 bundle install
 For many simple, single file projects, you may find it inconvenient to write a complete `Dockerfile`. In such cases, you can run a Ruby script by using the Ruby Docker image directly:
 
 ```console
-$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp ruby:2.5 ruby your-daemon-or-script.rb
+$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp arm64v8/ruby:2.5 ruby your-daemon-or-script.rb
 ```
 
 ## Encoding
@@ -131,17 +129,17 @@ If these cause issues for your use case (running multiple Ruby applications in a
 
 # Image Variants
 
-The `ruby` images come in many flavors, each designed for a specific use case.
+The `arm64v8/ruby` images come in many flavors, each designed for a specific use case.
 
-## `ruby:<version>`
+## `arm64v8/ruby:<version>`
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of. This tag is based off of [`buildpack-deps`](https://registry.hub.docker.com/_/buildpack-deps/). `buildpack-deps` is designed for the average user of docker who has many images on their system. It, by design, has a large number of extremely common Debian packages. This reduces the number of packages that images that derive from it need to install, thus reducing the overall size of all images on your system.
 
-## `ruby:<version>-slim`
+## `arm64v8/ruby:<version>-slim`
 
-This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `ruby`. Unless you are working in an environment where *only* the `ruby` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
+This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `arm64v8/ruby`. Unless you are working in an environment where *only* the `arm64v8/ruby` image will be deployed and you have space constraints, we highly recommend using the default image of this repository.
 
-## `ruby:<version>-alpine`
+## `arm64v8/ruby:<version>-alpine`
 
 This image is based on the popular [Alpine Linux project](http://alpinelinux.org), available in [the `alpine` official image](https://hub.docker.com/_/alpine). Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
